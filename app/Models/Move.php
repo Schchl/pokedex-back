@@ -15,15 +15,15 @@ class Move extends Model implements TranslatableContract
 
     protected $fillable = ['accuracy', 'move_damage_class_id', 'power', 'pp', 'priority', 'type_id'];
 
-    public function movedamageclass(){
+    public function damageClass(){
         return $this->belongsTo(Movedamageclass::class);
     }
 
-    public function movetype(){
+    public function type(){
         return $this->belongsTo(Type::class);
     }
 
-    public function pokemonlearnmoves(){
+    public function pokemonLearnMoves(){
         return $this->hasMany(Pokemonlearnmove::class);
     }
 
